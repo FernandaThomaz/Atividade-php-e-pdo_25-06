@@ -41,7 +41,7 @@ require("bd/conexao.php");
                         else{
                     ?>
                         <a href="?pg=area_restrita"><li>Área restrita</li></a>
-                        <a href="?pg=usuario/usuarios"><li>Usuários</li></a>
+                        <a href="?pg=cruds_usuarios/listar_usuarios"><li>Usuários</li></a>
                         <a href="?pg=logs"><li>Logs</li></a>
                     <?php
                         }

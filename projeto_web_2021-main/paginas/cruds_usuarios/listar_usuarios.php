@@ -31,7 +31,7 @@ $result = $ conn-> query ($ sql, PDO :: FETCH_ASSOC);
                 }
                 $_SESSION ['id'] = $linha ['id'];                
             ?>
-                <td> <a href="?pg=cruds/alterar&id=<?= $linha['id'] ?> "> Alterar </a> <br> <a href ="? pg = cruds / excluir & id = < ? = $ linha ['id']?> "> Excluir </a> </td>
+                <td> <a href="?pg=cruds_usuarios/alterar&id=<?= $linha['id'] ?> "> Alterar </a> <br> <a href ="? pg = cruds / excluir & id = < ? = $ linha ['id']?> "> Excluir </a> </td>
         </tr>
     <?php
         }
@@ -39,5 +39,5 @@ $result = $ conn-> query ($ sql, PDO :: FETCH_ASSOC);
 </table>
 
 <div id = "btn-limpar-sessao">
-    <a href="?pg=cruds/cadastrar"> Cadastrar Usuário </a>
+    <a href="?pg=cruds_usuarios/cadastrar"> Cadastrar Usuário </a>
 </div>

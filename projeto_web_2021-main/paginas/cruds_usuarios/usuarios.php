@@ -10,7 +10,7 @@ $result = $conn->query($sql, PDO::FETCH_ASSOC);
 
 <div class="menu-usuarios">
     <ul>
-        <a href="?pg=usuario/cadastrar_usuario"><li>Cadastrar novo usuário</li></a>
+        <a href="?pg=cruds_usuarios/cadastrar_usuario"><li>Cadastrar novo usuário</li></a>
     </ul>
 </div>
 
@@ -39,10 +39,10 @@ $result = $conn->query($sql, PDO::FETCH_ASSOC);
                 }
             ?>
             <td>
-            <a href="?pg=usuario/alterar_usuario&id=<?= $linha['id'] ?>">Alterar</a>
+            <a href="?pg=cruds_usuario/alterar_usuario&id=<?= $linha['id'] ?>">Alterar</a>
             </td>
             <td>
-            <a href="?pg=usuario/excluir_usuario&id=<?= $linha['id'] ?>">Excluir</a>
+            <a href="?pg=cruds_usuario/excluir_usuario&id=<?= $linha['id'] ?>">Excluir</a>
             </td>            
         </tr>
     <?php

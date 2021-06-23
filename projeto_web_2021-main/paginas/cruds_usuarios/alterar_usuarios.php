@@ -41,6 +41,7 @@
     <h1>Alterar os dados do contato</h1>
 
     <form method="POST">
+    <form method="POST" action="?pg=cruds_usuario/alterar_contato">
         <?php 
             while($contato = $resultContato->fetch()){                
         ?>

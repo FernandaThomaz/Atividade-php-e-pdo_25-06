@@ -32,5 +32,5 @@ if(isset($_GET["id"])){
 ?>
 
 <div id="btn-limpar-sessao">
-    <a href="?pg=usuario/usuarios">Voltar</a>
+    <a href="?pg=cruds_usuario/usuarios">Voltar</a>
 </div>
