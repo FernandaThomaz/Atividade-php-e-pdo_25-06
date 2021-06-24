@@ -23,5 +23,5 @@ if(!empty($_POST)){
     ?>
 
 <div id="btn-limpar-sessao">
-    <a href="?pg=cruds_usuarios/processar_alteracao_usuarios">Voltar</a>
+    <a href="?pg=cruds_usuarios/processar_usuarios">Voltar</a>
 </div>
