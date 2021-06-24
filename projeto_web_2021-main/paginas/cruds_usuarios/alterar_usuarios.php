@@ -4,13 +4,13 @@
     }
     $id = $_SESSION["id"];
     if(!empty($_POST)){        
-        $nome = $_POST["nome"];
-        $telefone = $_POST["telefone"];
-        $email = $_POST["email"];
-        $cidade = $_POST["cidade"];
-        $mensagem = $_POST["mensagem"];    
+        $nome= $_POST["nome"];
+        $telefone= $_POST["telefone"];
+        $email= $_POST["email"];
+        $cidade= $_POST["cidade"];
+        $mensagem= $_POST["mensagem"];    
         
-        $stmt = $conn->prepare("UPDATE contatos SET nome =:nome, telefone =:telefone, email =:email, cidade_id=:cidade, mensagem=:mensagem WHERE id =".$id);
+        $stmt= $conn->prepare("UPDATE contatos SET nome =:nome, telefone =:telefone, email =:email, cidade_id=:cidade, mensagem=:mensagem WHERE id =".$id);
         
         $bind_param = ["nome" => $nome, "telefone" => $telefone, "email" => $email, "cidade" => $cidade, "mensagem" => $mensagem];
         
@@ -41,7 +41,7 @@
     <h1>Alterar os dados do contato</h1>
 
     <form method="POST">
-    <form method="POST" action="?pg=cruds_usuario/alterar_contato">
+    <form method="POST" action="?pg=cruds_usuarios/usuarios">
         <?php 
             while($contato = $resultContato->fetch()){                
         ?>
@@ -65,12 +65,12 @@
                     while($linha = $resultCidades->fetch()){
                         if($contato['cidade'] == $linha["nome"]){
                 ?>  
-                            <option value="<?= $linha["id"] ?>" selected><?= $linha["nome"] ?> (<?= $linha["sigla_estado"] ?>)</option>
+                            <option value="<?= $linha["id"] ?>" selected><?= $linha["nome"] ?> (<?=$linha["sigla_estado"]?>)</option>
                     <?php
                         }
                         else{
                     ?>    
-                            <option value="<?= $linha["id"] ?>"><?= $linha["nome"] ?> (<?= $linha["sigla_estado"] ?>)</option>
+                            <option value="<?= $linha["id"] ?>"><?= $linha["nome"] ?> (<?=$linha["sigla_estado"]?>)</option>
                 <?php
                         }
                     }

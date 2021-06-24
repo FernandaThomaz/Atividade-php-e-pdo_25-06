@@ -4,7 +4,7 @@
 
 $sql = "SELECT * FROM logs";
 
-$result = $conn->query($sql, PDO::FETCH_ASSOC);
+$result = $conn->query($sql, PDO:: FETCH_ASSOC);
 
 ?>
 

@@ -4,27 +4,27 @@
 
 if(isset($_GET["id"])){
     
-    $id = $_GET["id"];
-    $user= $_SESSION["nome"];
-    $acao = ("O ID: ".$id. "Excluido");
-    $data_hora_log = date('Ymd H:i:s');   
+    $id=$_GET["id"];
+    $user=$_SESSION["nome"];
+    $acao=("O ID: ".$id. "Excluido");
+    $data_hora_log=date('Ymd H:i:s');   
 
     # Delete no banco de dados
-    $stmt = $conn->prepare("delete from usuarios where id = :id ");
-    $stmt1 = $conn->prepare("INSERT INTO logs (user, acao, data_hora_log) VALUES (:user, :acao, :data_hora_log)");
+    $stmt= $conn->prepare("delete from usuarios where id = :id");
+    $stmt1= $conn->prepare("INSERT INTO logs (user, acao, data_hora_log) VALUES (:user, :acao, :data_hora_log)");
 
-    $bind_param = ["id" => $id];
-    $bind_param1 = ["user"=> $user, "acao" =>$acao, "data_hora_log"=>$data_hora_log];
+    $bind_param = ["id"=>$id];
+    $bind_param1 = ["user"=>$user, "acao"=>$acao, "data_hora_log"=>$data_hora_log];
 
-    try {
+    try{
         $conn->beginTransaction();
         $stmt->execute($bind_param);
         $stmt1->execute($bind_param1);
-        echo '<div class="msg-cadastro-contato msg-cadastro-sucesso">Registro ' . $id . ' deletado do banco!</div>';
+        echo '<div class="msg-cadastro-contato msg-cadastro-sucesso">Registro' .$id. 'deletado do banco!</div>';
         $conn->commit();
-    } catch(PDOExecption $e) {
+    } catch(PDOExecption $e){
         $conn->rollback();
-        echo '<div class="msg-cadastro-contato msg-cadastro-erro">Erro ao deletar registro no banco: ' . $e->getMessage() . '</div>';
+        echo '<div class="msg-cadastro-contato msg-cadastro-erro">Erro ao deletar registro no banco: '. $e->getMessage(). '</div>';
     }
 
 }
@@ -32,5 +32,5 @@ if(isset($_GET["id"])){
 ?>
 
 <div id="btn-limpar-sessao">
-    <a href="?pg=cruds_usuario/usuarios">Voltar</a>
+    <a href="?pg=cruds_usuarios/listar_usuarios">Voltar</a>
 </div>

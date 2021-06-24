@@ -3,6 +3,7 @@
     <h1>Cadastrar usuário novamente </h1>
 
     <form method="POST">
+    <form method="POST" action="?pg=cruds_usuarios/cadastrar_usuarios">
         
         <div>
             <label>Nome</label>

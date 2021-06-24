@@ -39,10 +39,10 @@ $result = $conn->query($sql, PDO::FETCH_ASSOC);
                 }
             ?>
             <td>
-            <a href="?pg=cruds_usuario/alterar_usuario&id=<?= $linha['id'] ?>">Alterar</a>
+            <a href="?pg=cruds_usuarios/alterar_usuarios&id=<?= $linha['id'] ?>">Alterar</a>
             </td>
             <td>
-            <a href="?pg=cruds_usuario/excluir_usuario&id=<?= $linha['id'] ?>">Excluir</a>
+            <a href="?pg=cruds_usuarios/excluir_usuarios&id=<?= $linha['id'] ?>">Excluir</a>
             </td>            
         </tr>
     <?php

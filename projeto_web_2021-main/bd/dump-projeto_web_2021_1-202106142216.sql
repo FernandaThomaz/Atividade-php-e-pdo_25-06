@@ -1,4 +1,4 @@
--- MySQL dump 10.13  Distrib 5.7.33, for Linux (x86_64)
+-- MySQL dump 10.13  Distrib 5.7.33, for Linux (x64)
 --
 -- Host: localhost    Database: projeto_web_2021_1
 -- ------------------------------------------------------
